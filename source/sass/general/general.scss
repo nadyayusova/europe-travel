@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: $page-width-mobile;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  //font-family: "Oswald", "Arial", sans-serif;
+  //font-size: 14px;
+  //font-weight: 400;
+  //line-height: 1.5;
+  //color: $special_dark-grey;
+  //background-color: $white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
