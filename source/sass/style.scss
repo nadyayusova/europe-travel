@@ -7,7 +7,7 @@
 // all-purpose
 @import "blocks/visually-hidden.scss";
 // @import "blocks/container.scss";
-// @import "blocks/button.scss";
+@import "blocks/button.scss";
 // @import "blocks/section-title.scss";
 
 // header
@@ -15,7 +15,7 @@
 // @import "blocks/main-nav.scss";
 
 // index-main
-// @import "blocks/page-main.scss";
+@import "blocks/page-title.scss";
 // @import "blocks/page-title.scss";
 // @import "blocks/diet-plans.scss";
 // @import "blocks/plan.scss";

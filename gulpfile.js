@@ -94,7 +94,8 @@ const copy = (done) => {
     'source/manifest.webmanifest',
     'source/*.ico',
   ], {
-    base: 'source'
+    base: 'source',
+    allowEmpty: true
   })
     .pipe(gulp.dest('build'))
   done();
