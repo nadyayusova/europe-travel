@@ -1,0 +1,12 @@
+.tel__number {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.7;
+  color: $very-dark-grey;
+  text-decoration-line: underline;
+}
+
+.tel--footer .tel__number {
+  color: $basic-accent;
+}

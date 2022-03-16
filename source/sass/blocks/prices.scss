@@ -1,0 +1,44 @@
+.prices__title {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 1.6;
+  letter-spacing: -1.25px;
+  color: $dark-grey;
+
+  @media (max-width: $page-width-desktop) {
+    font-size: calc((100vw - 768px) / (1024 - 768) * (55 - 30) + 30px);
+  }
+
+  @media (max-width: $page-width-tablet) {
+    font-size: calc((100vw - 320px) / (768 - 320) * (30 - 24) + 24px);
+  }
+
+  @media (max-width: $page-width-mobile) {
+    font-size: 24px;
+  }
+}
+
+.prices__text {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(44, 46, 63, 0.7);
+}
+
+.prices__offer {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  color: $very-dark-grey;
+
+  @media (max-width: $page-width-desktop) {
+    font-size: calc((100vw - 768px) / (1024 - 768) * (22 - 18) + 18px);
+  }
+
+  @media (max-width: $page-width-tablet) {
+    font-size: 18px;
+  }
+}

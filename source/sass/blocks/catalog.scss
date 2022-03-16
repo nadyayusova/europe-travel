@@ -1,0 +1,29 @@
+.catalog__title {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 1.5;
+  letter-spacing: -1.25px;
+  color: $dark-grey;
+
+  @media (max-width: $page-width-desktop) {
+    font-size: calc((100vw - 768px) / (1024 - 768) * (55 - 30) + 30px);
+  }
+
+  @media (max-width: $page-width-tablet) {
+    font-size: calc((100vw - 320px) / (768 - 320) * (30 - 24) + 24px);
+  }
+
+  @media (max-width: $page-width-mobile) {
+    font-size: 24px;
+  }
+}
+
+.catalog__text {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: -0.47px;
+  color: rgba(44, 46, 63, 0.7);
+}

@@ -9,16 +9,16 @@ body {
   flex-direction: column;
   width: 100%;
   min-width: $page-width-mobile;
-  max-width: $page-width-desktop;
+  max-width: $max-width-desktop;
   min-height: 100vh;
   margin: 0 auto;
   padding: 0;
-  //font-family: "Oswald", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   //font-size: 14px;
-  //font-weight: 400;
+  font-weight: 400;
   //line-height: 1.5;
   //color: $special_dark-grey;
-  //background-color: $white;
+  background-color: $white;
 }
 
 a {

@@ -1,0 +1,19 @@
+.button {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $basic-accent;
+  border: none;
+
+  @media (max-width: $page-width-desktop) {
+    font-size: calc((100vw - 768px) / (1024 - 768) * (12 - 10) + 10px);
+  }
+
+  @media (max-width: $page-width-tablet) {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,44 @@
+.plan__title {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: rgba(20, 21, 23, 0.7);
+
+  @media (max-width: $page-width-desktop) {
+    font-size: calc((100vw - 768px) / (1024 - 768) * (28 - 24) + 24px);
+  }
+
+  @media (max-width: $page-width-tablet) {
+    font-size: 24px;
+  }
+}
+
+.plan__price {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  color: rgba(20, 21, 23, 0.7);
+}
+
+.plan--promoted .plan__title,
+.plan--promoted .plan__price {
+  color: $basic-accent;
+}
+
+.plan__offer {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $dark-grey;
+}
+
+.plan__item {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  color: $dark-grey;
+}
