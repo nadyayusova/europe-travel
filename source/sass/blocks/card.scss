@@ -1,1 +1,9 @@
-//
+.card:hover {
+  .card__fade {
+    display: block;
+  }
+}
+
+.card__fade {
+  display: none;
+}

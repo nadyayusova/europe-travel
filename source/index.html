@@ -51,42 +51,99 @@
     <section class="page-title">
         <h2 class="page-title__caption">Путешествие по Европе</h2>
         <p class="page-title__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-        <a class="button" href="#greece">Смотреть тур</a>
+        <a class="button" href="#tours">Смотреть тур</a>
     </section>
 
     <section class="catalog">
       <h2 class="catalog__title" id="catalog">Места посещения</h2>
       <p class="catalog__text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
+
+      <!-- без js можно перейти к нужной вкладке -->
       <ul class="catalog__content">
+
         <li class="catalog__item card">
-          <!-- здесь будет picture; webp и jpg -->
-          <img class="card__image" src="img/greece-desktop.jpg" width="350" height="430" alt="Греция">
+          <picture class="card__image">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet.webp 1x, img/greece-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/greece-desktop.webp 1x, img/greece-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/greece-tablet.jpg 1x, img/greece-tablet@2x.jpg 2x">
+            <img class="card__image" src="img/greece-desktop.jpg" srcset="img/greece-desktop@2x.jpg 2x" width="350" height="430" alt="Греция" loading="lazy">
+          </picture>
           <p class="card__country-name">Греция</p>
           <div class="card__fade">
             <a class="card__link button" href="#greece">Смотреть подробнее</a>
           </div>
         </li>
-        <li class="catalog__item"><a class="catalog__link" href="#albania">Албания</a></li>
-        <li class="catalog__item"><a class="catalog__link" href="#macedonia">Македония</a></li>
-        <li class="catalog__item"><a class="catalog__link" href="#montenegro">Черногория</a></li>
-        <li class="catalog__item"><a class="catalog__link" href="#croatia">Хорватия</a></li>
+
+        <li class="catalog__item card">
+          <picture class="card__image">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/albania-tablet.webp 1x, img/albania-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/albania-desktop.webp 1x, img/albania-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/albania-tablet.jpg 1x, img/albania-tablet@2x.jpg 2x">
+            <img class="card__image" src="img/albania-desktop.jpg" srcset="img/albania-desktop@2x.jpg 2x" width="350" height="430" alt="Албания" loading="lazy">
+          </picture>
+          <p class="card__country-name">Албания</p>
+          <div class="card__fade">
+            <a class="card__link button" href="#albania">Смотреть подробнее</a>
+          </div>
+        </li>
+
+        <li class="catalog__item card">
+          <picture class="card__image">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/macedonia-tablet.webp 1x, img/macedonia-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/macedonia-desktop.webp 1x, img/macedonia-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/macedonia-tablet.jpg 1x, img/macedonia-tablet@2x.jpg 2x">
+            <img class="card__image" src="img/macedonia-desktop.jpg" srcset="img/macedonia-desktop@2x.jpg 2x" width="350" height="430" alt="Македония" loading="lazy">
+          </picture>
+          <p class="card__country-name">Македония</p>
+          <div class="card__fade">
+            <a class="card__link button" href="#macedonia">Смотреть подробнее</a>
+          </div>
+        </li>
+
+        <li class="catalog__item card">
+          <picture class="card__image">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegro-tablet.webp 1x, img/montenegro-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/montenegro-desktop.webp 1x, img/montenegro-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/montenegro-tablet.jpg 1x, img/montenegro-tablet@2x.jpg 2x">
+            <img class="card__image" src="img/montenegro-desktop.jpg" srcset="img/montenegro-desktop@2x.jpg 2x" width="350" height="430" alt="Черногория" loading="lazy">
+          </picture>
+          <p class="card__country-name">Черногория</p>
+          <div class="card__fade">
+            <a class="card__link button" href="#montenegro">Смотреть подробнее</a>
+          </div>
+        </li>
+
+        <li class="catalog__item card">
+          <picture class="card__image">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/croatia-tablet.webp 1x, img/croatia-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/croatia-desktop.webp 1x, img/croatia-desktop@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/croatia-tablet.jpg 1x, img/croatia-tablet@2x.jpg 2x">
+            <img class="card__image" src="img/croatia-desktop.jpg" srcset="img/croatia-desktop@2x.jpg 2x" width="350" height="430" alt="Хорватия" loading="lazy">
+          </picture>
+          <p class="card__country-name">Хорватия</p>
+          <div class="card__fade">
+            <a class="card__link button" href="#croatia">Смотреть подробнее</a>
+          </div>
+        </li>
+
       </ul>
     </section>
 
     <section class="details">
       <h2 class="visually-hidden">Подробное описание</h2>
 
-      <ul class="tabs-list">
-        <li class="tabs-list__item"><a class="tabs-list__link tabs-list__link--active" id="greece">Греция</a></li>
-        <li class="tabs-list__item"><a class="tabs-list__link" id="albania">Албания</a></li>
-        <li class="tabs-list__item"><a class="tabs-list__link" id="macedonia">Македония</a></li>
-        <li class="tabs-list__item"><a class="tabs-list__link" id="montenegro">Черногория</a></li>
-        <li class="tabs-list__item"><a class="tabs-list__link" id="croatia">Хорватия</a></li>
+      <!-- tab-content--active везде нужен, чтобы вкладки были видны и без js перейти к нужной вкладке -->
+      <ul class="tabs-list" id="tours">
+        <li class="tabs-list__item tabs-list__item--active"><a class="" href="#greece">Греция</a></li>
+        <li class="tabs-list__item"><a class="" href="#albania">Албания</a></li>
+        <li class="tabs-list__item"><a class="" href="#macedonia">Македония</a></li>
+        <li class="tabs-list__item"><a class="" href="#montenegro">Черногория</a></li>
+        <li class="tabs-list__item"><a class="" href="#croatia">Хорватия</a></li>
       </ul>
 
-      <div class="tab-content">
+      <div class="tab-content tab-content--active">
         <div class="about-country">
-          <h3 class="about-country__title">Греция</h3>
+          <h3 class="about-country__title" id="greece">Греция</h3>
           <p class="about-country__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
           <button class="about-country__buy-button button">Купить тур сейчас</button>
         </div>
@@ -97,9 +154,9 @@
         </div>
       </div>
 
-      <div class="tab-content">
+      <div class="tab-content tab-content--active">
         <div class="about-country">
-          <h3 class="about-country__title">Албания</h3>
+          <h3 class="about-country__title" id="albania">Албания</h3>
           <p class="about-country__text">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.</p>
           <button class="about-country__buy-button button">Купить тур сейчас</button>
         </div>
@@ -110,9 +167,9 @@
         </div>
       </div>
 
-      <div class="tab-content">
+      <div class="tab-content tab-content--active">
         <div class="about-country">
-          <h3 class="about-country__title">Македония</h3>
+          <h3 class="about-country__title" id="macedonia">Македония</h3>
           <p class="about-country__text">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.</p>
           <button class="about-country__buy-button button">Купить тур сейчас</button>
         </div>
@@ -123,9 +180,9 @@
         </div>
       </div>
 
-      <div class="tab-content">
+      <div class="tab-content tab-content--active">
         <div class="about-country">
-          <h3 class="about-country__title">Черногория</h3>
+          <h3 class="about-country__title" id="montenegro">Черногория</h3>
           <p class="about-country__text">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.</p>
           <button class="about-country__buy-button button">Купить тур сейчас</button>
         </div>
@@ -136,9 +193,9 @@
         </div>
       </div>
 
-      <div class="tab-content">
+      <div class="tab-content tab-content--active">
         <div class="about-country">
-          <h3 class="about-country__title">Хорватия</h3>
+          <h3 class="about-country__title" id="croatia">Хорватия</h3>
           <p class="about-country__text">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.</p>
           <button class="about-country__buy-button button">Купить тур сейчас</button>
         </div>
@@ -282,7 +339,7 @@
     </p>
   </div>
 
-  <!-- <script src="js/main.min.js"></script> -->
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

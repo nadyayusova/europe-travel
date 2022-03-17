@@ -1,5 +1,7 @@
 .page-title {
-  height: 860px;
+  height: calc(45vw);
+  max-height: 860px;
+  min-height: 235px;
   background-color: $title-bg;
   background-image: url("../img/title-background-desktop.jpg");
   background-position: center;
@@ -11,7 +13,6 @@
   }
 
   @media (max-width: $tablet-width-breakpoint) {
-    height: 344px;
     background-image: url("../img/title-background-tablet.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -19,8 +20,7 @@
     }
   }
 
-  @media (max-width: $mobile-width-breakpoint) {
-    height: 235px;
+  @media (max-width: $page-width-mobile) {
     background-image: url("../img/title-background-mobile.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
