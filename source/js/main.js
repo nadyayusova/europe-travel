@@ -1,5 +1,25 @@
 'use strict';
 
+var navMain = document.querySelector('.main-nav');
+var navToggle = document.querySelector('.main-nav__toggle');
+
+// init!
+navMain.classList.remove('main-nav--nojs');
+
+navToggle.addEventListener('click', function() {
+  if (navMain.classList.contains('main-nav--closed')) {
+    navMain.classList.remove('main-nav--closed');
+    navMain.classList.add('main-nav--opened');
+  } else {
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
+  }
+});
+
+navToggle.click();
+
+//-----------------
+// по-другому, через id
 let tabs = document.querySelectorAll('.tabs-list__item');
 let tabsContent = document.querySelectorAll('.tab-content');
 let inactiveTabs = document.querySelectorAll('.tab-content:not(:first-of-type)');

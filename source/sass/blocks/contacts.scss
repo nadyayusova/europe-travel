@@ -1,16 +1,24 @@
+.contacts {
+  padding-left: 65px;
+  border-right: 1px solid $footer-grey;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    padding-left: 50px;
+    border: none;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    padding: 0;
+    border-top: 1px solid $footer-grey;
+  }
+}
+
 .contacts__title {
+  margin: 0;
+  margin-bottom: 20px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.77;
   color: $very-dark-grey;
-}
-
-.contacts__email {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.21;
-  text-decoration-line: underline;
-  color: $basic-accent;
 }

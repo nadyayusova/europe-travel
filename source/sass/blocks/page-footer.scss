@@ -1,0 +1,39 @@
+.page-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: $tablet-width-breakpoint) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "places contacts"
+      "travels travels";
+    padding-left: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
+    padding-right: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "places"
+      "contacts"
+      "travels";
+  }
+}
+
+.page-footer__places {
+  @media (max-width: $tablet-width-breakpoint) {
+    grid-area: places;
+  }
+}
+
+.page-footer__contacts {
+  @media (max-width: $tablet-width-breakpoint) {
+    grid-area: contacts;
+  }
+}
+
+.page-footer__corporate {
+  @media (max-width: $tablet-width-breakpoint) {
+    grid-area: travels;
+  }
+}

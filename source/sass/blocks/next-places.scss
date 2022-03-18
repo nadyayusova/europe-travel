@@ -1,4 +1,14 @@
+.next-places {
+  border-right: 1px solid $footer-grey;
+
+  @media (max-width: $mobile-width-breakpoint) {
+    border: none;
+  }
+}
+
 .next-places__title {
+  margin: 0;
+  margin-bottom: 20px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
   font-size: 18px;
@@ -6,7 +16,16 @@
   color: $very-dark-grey;
 }
 
+.next-places__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .next-places__item {
+  margin-bottom: 10px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;

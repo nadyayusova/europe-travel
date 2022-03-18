@@ -12,7 +12,7 @@
 
 // header
 // @import "blocks/page-header.scss";
-// @import "blocks/main-nav.scss";
+@import "blocks/main-nav.scss";
 @import "blocks/menu.scss";
 @import "blocks/tel.scss";
 
@@ -41,12 +41,11 @@
 // @import "blocks/additions.scss";
 
 // footer
-// @import "blocks/address.scss";
+@import "blocks/page-footer.scss";
 @import "blocks/next-places.scss";
 @import "blocks/contacts.scss";
+@import "blocks/email.scss";
 @import "blocks/corporate-travels.scss";
-// @import "blocks/socials.scss";
-// @import "blocks/copyright.scss";
 
 // modal
 @import "blocks/modal-form.scss";

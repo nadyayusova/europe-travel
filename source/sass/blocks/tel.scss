@@ -1,3 +1,34 @@
+.tel {
+  &--menu {
+    margin-left: 70px;
+
+    @media (max-width: $tablet-width-breakpoint) {
+      display: none;
+    }
+  }
+
+  &--footer .tel__number {
+    color: $basic-accent;
+  }
+}
+
+.tel__icon {
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.tel__icon--menu {
+  stroke: $very-dark-grey;
+}
+
+.tel__icon--prices {
+  stroke: $basic-accent;
+}
+
+.tel__icon--footer {
+  stroke: $footer-grey;
+}
+
 .tel__number {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
@@ -5,8 +36,4 @@
   line-height: 1.7;
   color: $very-dark-grey;
   text-decoration-line: underline;
-}
-
-.tel--footer .tel__number {
-  color: $basic-accent;
 }

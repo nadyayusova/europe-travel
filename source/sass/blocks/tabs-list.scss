@@ -5,8 +5,8 @@
   line-height: 1.2;
   letter-spacing: -0.41px;
   color: rgba(44, 46, 63, 0.3);
-}
 
-.tabs-list__item--active {
-  color: $basic-accent;
+  &--active {
+    color: $basic-accent;
+  }
 }

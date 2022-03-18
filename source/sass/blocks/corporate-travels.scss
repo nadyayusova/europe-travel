@@ -1,4 +1,16 @@
+.corporate-travels {
+  padding-left: 55px;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    padding-left: 0;
+    padding-top: 30px;
+    border-top: 1px solid $footer-grey;
+  }
+}
+
 .corporate-travels__title {
+  margin: 0;
+  margin-bottom: 20px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
   font-size: 18px;

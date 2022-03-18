@@ -1,12 +1,10 @@
 .container {
   max-width: $max-desktop-content;
   margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
 
-  // @media (max-width: $page-width-tablet) {
-  //   width: $page-width-tablet;
-  // }
-
-  // @media (max-width: $page-width-desktop) {
-  //   width: $page-width-desktop;
-  // }
+  @media (max-width: $tablet-width-breakpoint) {
+    padding: 0;
+  }
 }

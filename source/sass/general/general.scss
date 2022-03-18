@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  // outline: 2px solid red;
+  // outline-offset: -2px;
 }
 
 body {
@@ -14,10 +16,10 @@ body {
   margin: 0 auto;
   padding: 0;
   font-family: "Montserrat", "Arial", sans-serif;
-  //font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  //line-height: 1.5;
-  //color: $special_dark-grey;
+  line-height: 1.7;
+  color: $very-dark-grey;
   background-color: $white;
 }
 

@@ -13,17 +13,24 @@
 <body>
 
   <header class="page-header">
-    <nav class="main-nav">
-      <!-- Ссылка в логотипе на главную: навык "Верстка навигационных элементов интерфейса", глава "Содержимое основной навигации" -->
-      <a class="main-nav__logo" href="/index.html" aria-label="Главная страница Way">
-        <svg class="main-nav__logo-image main-nav__logo-image--desktop" width="57" height="22" viewBox="0 0 57 22" role="img" focusable="false">
-          <use xlink:href="img/sprite.svg#logo-desktop"></use>
-        </svg>
-        <svg class="main-nav__logo-image main-nav__logo-image--tablet" width="44" height="17" viewBox="0 0 44 14" role="img" focusable="false">
-          <use xlink:href="img/sprite.svg#logo-tablet"></use>
-        </svg>
-        <span class="visually-hidden">На главную</span>
-      </a>
+    <nav class="main-nav main-nav--opened main-nav--nojs container">
+    <!-- <nav class="main-nav main-nav--opened container"> -->
+    <!-- <nav class="main-nav main-nav--closed container"> -->
+      <div class="main-nav__controls">
+        <!-- Ссылка в логотипе на главную: навык "Верстка навигационных элементов интерфейса", глава "Содержимое основной навигации" -->
+        <a class="main-nav__logo" href="/index.html" aria-label="Главная страница Way">
+          <svg class="main-nav__logo-image main-nav__logo-image--desktop" width="57" height="22" viewBox="0 0 57 22" role="img" focusable="false">
+            <use xlink:href="img/sprite.svg#logo-desktop"></use>
+          </svg>
+          <svg class="main-nav__logo-image main-nav__logo-image--tablet" width="44" height="17" viewBox="0 0 44 14" role="img" focusable="false">
+            <use xlink:href="img/sprite.svg#logo-tablet"></use>
+          </svg>
+          <span class="visually-hidden">На главную</span>
+        </a>
+        <button class="main-nav__toggle" type="button" name="toggle-menu">
+          <span class="visually-hidden">Меню</span>
+        </button>
+      </div>
       <ul class="main-nav__list menu">
         <li class="menu__item">
           <a class="menu__link" href="#catalog">О путешествии</a>
@@ -32,16 +39,12 @@
           <a class="menu__link" href="#prices">Цены</a>
         </li>
       </ul>
-      <div class="tel">
-        <!-- поменять размеры и вьюбокс изображения -->
-        <svg class="tel__icon tel__icon--menu" width="20" height="21" viewBox="0 0 20 21" role="img" aria-label="Фоновое изображение" focusable="false">
+      <div class="tel tel--menu">
+        <svg class="tel__icon tel__icon--menu" width="30" height="30" viewBox="0 0 30 30" role="img" aria-label="Значок телефона" focusable="false">
           <use xlink:href="img/sprite.svg#phone"></use>
         </svg>
         <a class="tel__number" href="tel:+749978468446">+7 (499) -784-684-46</a>
       </div>
-      <button class="main-nav__toggle" type="button" name="toggle-menu">
-        <span class="visually-hidden">Меню</span>
-      </button>
     </nav>
   </header>
 
@@ -212,9 +215,8 @@
         <h2 class="prices__title" id="prices">Цены</h2>
         <p class="prices__text">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
         <p class="prices__offer">Свяжитесь с нами</p>
-        <div class="tel">
-          <!-- поменять размеры и вьюбокс изображения -->
-          <svg class="tel__icon tel__icon--prices" width="20" height="21" viewBox="0 0 20 21" role="img" aria-label="Фоновое изображение" focusable="false">
+        <div class="tel tel--prices">
+          <svg class="tel__icon tel__icon--prices" width="30" height="30" viewBox="0 0 30 30" role="img" aria-label="Значок телефона" focusable="false">
             <use xlink:href="img/sprite.svg#phone"></use>
           </svg>
           <a class="tel__number" href="tel:+749978468446">+7 (499) -784-684-46</a>
@@ -274,8 +276,8 @@
     </section>
   </main>
 
-  <footer class="page-footer">
-    <div class="next-places">
+  <footer class="page-footer container">
+    <div class="page-footer__places next-places">
       <h2 class="next-places__title">Следующие путешествия</h2>
       <ul class="next-places__list">
         <li class="next-places__item">Марсель</li>
@@ -296,19 +298,23 @@
       </ul>
     </div>
 
-    <div class="contacts">
+    <div class="page-footer__contacts contacts">
       <h2 class="contacts__title">Наши контакты</h2>
-      <a class="contacts__email" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+      <div class="email">
+        <svg class="email__icon" width="26" height="20" viewBox="0 0 26 20" role="img" aria-label="Значок конверта" focusable="false">
+          <use xlink:href="img/sprite.svg#email"></use>
+        </svg>
+        <a class="email__link" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+      </div>
       <div class="tel tel--footer">
-        <!-- поменять размеры и вьюбокс изображения -->
-        <svg class="tel__icon" width="20" height="21" viewBox="0 0 20 21" role="img" aria-label="Фоновое изображение" focusable="false">
+        <svg class="tel__icon tel__icon--footer" width="30" height="30" viewBox="0 0 30 30" role="img" aria-label="Значок телефона" focusable="false">
           <use xlink:href="img/sprite.svg#phone"></use>
         </svg>
         <a class="tel__number" href="tel:+749978468446">+7 (499) -784-684-46</a>
       </div>
     </div>
 
-    <div class="corporate-travels">
+    <div class="page-footer__corporate corporate-travels">
       <h2 class="corporate-travels__title">Корпоративные путешествия</h2>
       <p class="corporate-travels__text">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
     </div>
