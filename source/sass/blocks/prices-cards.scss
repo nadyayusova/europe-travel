@@ -1,0 +1,36 @@
+.prices-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-auto-flow: dense;
+  grid-gap: 30px;
+  margin-top: -258px;
+  margin-bottom: 136px;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 42px;
+    grid-auto-flow: row;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 109px;
+    padding-left: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
+    padding-right: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0;
+    margin-bottom: 48px;
+
+    & > :nth-child(1) {
+      margin-bottom: 41px;
+    }
+
+    & > :nth-child(2) {
+      margin-bottom: 28px;
+    }
+  }
+}

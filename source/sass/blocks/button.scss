@@ -1,19 +1,76 @@
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 25px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.2;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
   color: $white;
   background-color: $basic-accent;
   border: none;
 
   @media (max-width: $page-width-desktop) {
+    padding: 10px;
     font-size: calc((100vw - 768px) / (1024 - 768) * (12 - 10) + 10px);
+  }
+
+  @media (max-width: $tablet-width-breakpoint) {
+    width: 288px;
   }
 
   @media (max-width: $page-width-tablet) {
     font-size: 10px;
+  }
+
+  &:hover {
+    background-color: $accent-hover;
+  }
+
+  &--page-title {
+    justify-content: flex-start;
+    width: 340px;
+    padding: 30px 40px;
+    text-align: left;
+    background-image: url("../img/arrow-down.svg");
+    background-position: right 40px center;
+    background-repeat: no-repeat;
+
+    @media (max-width: $tablet-width-breakpoint) {
+      padding: 10px 40px;
+      font-weight: 500;
+    }
+  }
+
+  &--inverse {
+    width: 266px;
+    height: 77px;
+    padding: 30px 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    &:hover {
+      color: #000000;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  &--buy {
+    @media (max-width: $tablet-width-breakpoint) {
+      min-width: 250px;
+      min-height: 50px;
+    }
+
+    @media (max-width: $mobile-width-breakpoint) {
+      width: 288px;
+    }
   }
 }

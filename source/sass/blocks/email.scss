@@ -1,4 +1,16 @@
+.email {
+  display: flex;
+  margin-bottom: 20px;
+
+  &:hover {
+    .email__icon {
+      fill: $basic-accent;
+    }
+  }
+}
+
 .email__icon {
+  margin-right: 14px;
   fill: $footer-grey;
 }
 

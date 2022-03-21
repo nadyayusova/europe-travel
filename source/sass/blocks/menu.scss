@@ -1,5 +1,7 @@
 .menu {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 630px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -19,6 +21,10 @@
     align-items: center;
     min-height: 60px;
     margin-left: 0;
+    background-color: #fbf8f8;
+    background-image: url("../img/arrow-menu.svg");
+    background-position: right 24px center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -44,6 +50,14 @@
   @media (max-width: $tablet-width-breakpoint) {
     display: block;
     width: 100%;
-    padding: 20px 16px;
+    padding: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $modal-text;
+  }
+
+  &:hover {
+    color: $basic-accent;
   }
 }

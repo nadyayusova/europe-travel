@@ -1,5 +1,6 @@
 .page-title {
-  height: calc(45vw);
+  height: 45vw;
+  margin-bottom: 200px;
   max-height: 860px;
   min-height: 235px;
   background-color: $title-bg;
@@ -13,11 +14,17 @@
   }
 
   @media (max-width: $tablet-width-breakpoint) {
+    width: 100%;
+    margin-bottom: 80px;
     background-image: url("../img/title-background-tablet.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/title-background-tablet@2x.jpg");
     }
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    margin-bottom: 280px;
   }
 
   @media (max-width: $page-width-mobile) {
@@ -30,20 +37,33 @@
 }
 
 .page-title__caption {
+  position: relative;
+  left: 56%;
+  top: 21.5%;
+  max-width: 420px;
   margin: 0;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
   font-size: 55px;
-  line-height: 1.5;
+  line-height: 1.45;
   letter-spacing: -1.11px;
   color: $white;
 
   @media (max-width: $page-width-desktop) {
+    left: 0;
+    top: 18%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: calc((100vw - 768px) / (1024 - 768) * (55 - 30) + 30px);
+    letter-spacing: 0.1px;
+    text-align: center;
   }
 
   @media (max-width: $page-width-tablet) {
+    top: 35%;
+    max-width: 75%;
     font-size: calc((100vw - 320px) / (768 - 320) * (30 - 24) + 24px);
+    letter-spacing: 0;
   }
 
   @media (max-width: $page-width-mobile) {
@@ -52,10 +72,52 @@
 }
 
 .page-title__description {
+  position: relative;
+  left: 56%;
+  top: 25%;
+  max-width: 380px;
+  margin: 0;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   letter-spacing: -0.47px;
-  color: rgba(44, 46, 63, 0.7);
+  color: $white;
+
+  @media (max-width: $page-width-desktop) {
+    left: 0;
+    top: 22%;
+    max-width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    top: 79%;
+    padding-left: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
+    padding-right: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
+    color: rgba(44, 46, 63, 0.7);
+  }
+}
+
+.page-title__button {
+  position: relative;
+  left: 56%;
+  top: 29%;
+  max-width: 380px;
+
+  @media (max-width: $page-width-desktop) {
+    left: 0;
+    top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 50px;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    top: 87%;
+    width: 288px;
+  }
 }

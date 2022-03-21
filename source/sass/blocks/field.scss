@@ -1,0 +1,16 @@
+.field__text-input {
+  width: 270px;
+  padding: 14px 12px;
+
+  &:invalid {
+    border: 2px solid $basic-accent;
+  }
+
+  &--tel {
+    margin-bottom: 19px;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    width: 288px;
+  }
+}

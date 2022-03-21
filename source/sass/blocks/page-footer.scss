@@ -1,12 +1,15 @@
 .page-footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 80px;
 
   @media (max-width: $tablet-width-breakpoint) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 54% 46%;
     grid-template-areas:
       "places contacts"
       "travels travels";
+    margin-bottom: 55px;
+    max-width: 100%;
     padding-left: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
     padding-right: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
   }
@@ -17,6 +20,9 @@
       "places"
       "contacts"
       "travels";
+    justify-items: center;
+    margin-bottom: 0;
+    padding-bottom: 30px;
   }
 }
 

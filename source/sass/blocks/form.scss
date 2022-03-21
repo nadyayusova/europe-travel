@@ -1,16 +1,97 @@
+.form {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 655px;
+  padding: 46px 48px;
+  background-color: $white;
+  box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
+  border-radius: 5px;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    max-width: 658px;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    position: static;
+    transform: none;
+    max-width: 100%;
+    min-width: 10%;
+    padding-left: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
+    padding-right: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
+    background-color: #fbf8f8;
+    box-shadow: none;
+  }
+}
+
 .form__title {
+  margin: 5px 0 10px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
   font-size: 25px;
   line-height: 1.28;
   color: $very-dark-grey;
+
+  @media (max-width: $mobile-width-breakpoint) {
+    margin-bottom: 19px;
+    text-align: center;
+  }
 }
 
 .form__offer {
+  margin: 0;
+  margin-bottom: 24px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+
+  @media (max-width: $mobile-width-breakpoint) {
+    margin-bottom: 19px;
+    text-align: center;
+  }
 }
 
-// еще шрифт в плейсхолдерах
+.form__content {
+  display: flex;
+  justify-content: space-between;
+  min-width: 557px;
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
+  list-style-type: none;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+  }
+}
+
+.form__submit {
+  width: 176px;
+  height: 50px;
+  padding: 10px 15px;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    min-width: 250px;
+    min-height: 50px;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    width: 288px;
+    height: 50px;
+  }
+}

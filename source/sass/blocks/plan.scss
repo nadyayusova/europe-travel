@@ -1,19 +1,79 @@
 .plan {
-  &--promoted .plan__title,
-  &--promoted .plan__price {
-    color: $basic-accent;
+  display: grid;
+  grid-template-rows: 79px 108px minmax(345px, max-content) 75px;
+  grid-template-areas:
+    "ptitle  price"
+    "poffer  poffer"
+    "plist   plist"
+    "pbutton pbutton";
+  padding: 31px 28px;
+  border: 3px solid rgba(44, 46, 63, 0.3);
+  border-radius: 6px;
+
+  &:hover {
+    border-color: $basic-accent;
+
+    .plan__title,
+    .plan__price {
+      color: $basic-accent;
+    }
+
+    .plan__terms {
+      list-style-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z' fill='%23141517'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  &:last-child {
+    .plan__title {
+      letter-spacing: -1.3px;
+    }
+  }
+
+  @media (max-width: $tablet-width-breakpoint) {
+    grid-template-rows: 42px 45px 103px minmax(355px, max-content) 50px;
+    grid-template-areas:
+      "ptitle"
+      "price"
+      "poffer"
+      "plist"
+      "pbutton";
+    max-width: 288px;
+    padding: 29px 0 0;
+
+    &:nth-last-child(2) {
+      justify-self: end;
+    }
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    &:last-child {
+      .plan__price {
+        margin-right: 10px;
+      }
+
+      .plan__item {
+        margin-bottom: 12px;
+      }
+    }
   }
 }
 
 .plan__title {
+  grid-area: ptitle;
+  margin: 7px 0 10px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
   font-size: 28px;
   line-height: 34px;
   color: rgba(20, 21, 23, 0.7);
 
-  @media (max-width: $page-width-desktop) {
-    font-size: calc((100vw - 768px) / (1024 - 768) * (28 - 24) + 24px);
+  @media (max-width: $max-width-desktop) {
+    font-size: calc((100vw - 768px) / (1920 - 768) * (28 - 24) + 24px);
+  }
+
+  @media (max-width: $tablet-width-breakpoint) {
+    justify-self: center;
+    margin: 0;
   }
 
   @media (max-width: $page-width-tablet) {
@@ -22,25 +82,82 @@
 }
 
 .plan__price {
+  grid-area: price;
+  justify-self: end;
+  margin: 7px 0 10px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 34px;
   color: rgba(20, 21, 23, 0.7);
+
+  @media (max-width: $tablet-width-breakpoint) {
+    justify-self: center;
+    margin: 0;
+  }
 }
 
 .plan__offer {
+  grid-area: poffer;
+  max-width: 90%;
+  margin: 0 0 10px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: $dark-grey;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 17px;
+      bottom: 2px;
+      width: 248px;
+      height: 1px;
+      background-color: $basic-accent;
+    }
+  }
+}
+
+.plan__terms {
+  grid-area: plist;
+  margin: 0;
+  padding: 0 20px;
+  list-style-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z' fill='%23FE7865'/%3E%3C/svg%3E%0A");
+
+  @media (max-width: $tablet-width-breakpoint) {
+    padding-left: 38px;
+    padding-right: 10px;
+  }
 }
 
 .plan__item {
+  margin-bottom: 15px;
+  padding-left: 9px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.93;
   color: $dark-grey;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    margin-bottom: 10px;
+    padding-right: 10px;
+  }
+}
+
+.plan__button {
+  grid-area: pbutton;
 }

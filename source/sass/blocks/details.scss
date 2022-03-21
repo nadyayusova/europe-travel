@@ -1,0 +1,10 @@
+.details {
+  @media (max-width: $tablet-width-breakpoint) {
+    padding-bottom: 47px;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    padding-bottom: 45px;
+  }
+}
+

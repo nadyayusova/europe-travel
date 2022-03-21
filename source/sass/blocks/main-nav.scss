@@ -9,9 +9,40 @@
   }
 }
 
-.main-nav--closed .main-nav__list {
-  @media (max-width: $tablet-width-breakpoint) {
-    display: none;
+.main-nav--closed {
+  .main-nav__list {
+    @media (max-width: $tablet-width-breakpoint) {
+      display: none;
+    }
+  }
+
+  .main-nav__toggle {
+    @media (max-width: $tablet-width-breakpoint) {
+      position: relative;
+      display: block;
+      max-width: 70px;
+      min-width: 50px;
+      width: 9.12%;
+      height: 100%;
+      padding: 8px;
+      background-color: $basic-accent;
+      border: none;
+    }
+  }
+
+  .main-nav__toggle::before {
+    @media (max-width: $tablet-width-breakpoint) {
+      content: "";
+      position: absolute;
+      top: 32%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 2px;
+      background-color: $white;
+      box-shadow: 0 8px 0 0 $white, 0 16px 0 0 $white;
+      z-index: 30;
+    }
   }
 }
 
@@ -30,11 +61,44 @@
   .main-nav__toggle {
     @media (max-width: $tablet-width-breakpoint) {
       position: absolute;
+      display: block;
       top: 0;
       right: 0;
       width: 50px;
       height: 50px;
+      background-color: transparent;
+      border: none;
+      // outline: 1px solid tomato;
+      // outline-offset: -1px;
       z-index: 20;
+    }
+  }
+
+  .main-nav__toggle::before,
+  .main-nav__toggle::after {
+    @media (max-width: $tablet-width-breakpoint) {
+      content: "";
+      position: absolute;
+      top: 45%;
+      left: 20%;
+      width: 30px;
+      height: 2px;
+      background-color: rgba(20, 21, 23, 0.2);
+      z-index: 30;
+    }
+  }
+
+  .main-nav__toggle::before {
+    @media (max-width: $tablet-width-breakpoint) {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+  }
+
+
+  .main-nav__toggle::after {
+    @media (max-width: $tablet-width-breakpoint) {
+      transform: rotate(-45deg);
     }
   }
 }
@@ -75,30 +139,13 @@
 .main-nav__logo-image {
   display: block;
 
-  &--desktop {
-    @media (max-width: $tablet-width-breakpoint) {
-      display: none;
-    }
-  }
-
-  &--tablet {
-    display: none;
-
-    @media (max-width: $tablet-width-breakpoint) {
-      display: block;
-      margin-left: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
-    }
+  @media (max-width: $tablet-width-breakpoint) {
+    width: 44px;
+    height: 17px;
+    margin-left: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
   }
 }
 
 .main-nav__toggle {
   display: none;
-
-  @media (max-width: $tablet-width-breakpoint) {
-    display: block;
-    max-width: 70px;
-    min-width: 50px;
-    width: 9.12%;
-    height: 100%;
-  }
 }

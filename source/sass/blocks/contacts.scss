@@ -1,24 +1,29 @@
 .contacts {
-  padding-left: 65px;
+  padding-left: 16%;
   border-right: 1px solid $footer-grey;
 
   @media (max-width: $tablet-width-breakpoint) {
-    padding-left: 50px;
     border: none;
   }
 
   @media (max-width: $mobile-width-breakpoint) {
     padding: 0;
+    margin-bottom: 28px;
     border-top: 1px solid $footer-grey;
   }
 }
 
 .contacts__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 27px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.77;
   color: $very-dark-grey;
+
+  @media (max-width: $mobile-width-breakpoint) {
+    margin-top: 30px;
+    text-align: center;
+  }
 }

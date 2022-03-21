@@ -1,0 +1,20 @@
+.question-form {
+  position: relative;
+  min-height: 455px;
+  margin-bottom: 160px;
+  background-image: url("../../img/form-bg-desktop.jpg");
+  background-position: 24px 0;
+  background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 80px;
+    background-position: center top;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    margin-bottom: 45px;
+    background-image: none;
+  }
+}

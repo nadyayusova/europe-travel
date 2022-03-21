@@ -1,3 +1,75 @@
-.tab-content:not(.tab-content--active) {
-  display: none;
+.tab-content {
+  min-height: 1089px;
+  margin-top: 64px;
+  background-color: $white;
+  background-image: url("../img/europe.svg");
+  background-position: center top 15px;
+  background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    min-height: 100px;
+    margin-top: 20px;
+    background-image: none;
+  }
+
+  &:not(.tab-content--active) {
+    display: none;
+  }
+}
+
+.tab-content__wrapper {
+  display: grid;
+  grid-template-columns: 40.17% 1fr 382px;
+  grid-template-rows: 1fr min-content 1fr;
+  min-height: 596px;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: minmax(343px, max-content) 80px minmax(350px, max-content) 32px;
+    min-height: 780px;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    grid-template-columns: 1fr 268px 1fr;
+    grid-template-rows: auto minmax(50px, auto) minmax(431px, max-content) auto;
+    min-height: 1049px;
+  }
+}
+
+.tab-content__about {
+  grid-area: 1 / 1 / 4 / 2;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    grid-area: 1 / 1 / 2 / 4;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    & .button--buy {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.tab-content__image {
+  grid-area: 1 / 2 / 4 / 4;
+  display: block;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    grid-area: 2 / 1 / 4 / 4;
+    width: 100%;
+  }
+}
+
+.tab-content__reviews {
+  grid-area: 2 / 3 / 3 / 4;
+  max-width: 382px;
+  min-height: 250px;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+
+  @media (max-width: $mobile-width-breakpoint) {
+    max-width: 268px;
+  }
 }

@@ -1,39 +1,103 @@
 .tel {
+  display: flex;
+  align-items: center;
+
   &--menu {
-    margin-left: 70px;
+    margin-left: 71px;
 
     @media (max-width: $tablet-width-breakpoint) {
       display: none;
     }
   }
 
-  &--footer .tel__number {
-    color: $basic-accent;
+  &--menu:hover {
+    .tel__number {
+      color: $basic-accent;
+    }
+
+    .tel__icon {
+      stroke: $basic-accent;
+    }
+  }
+
+  &--prices {
+    .tel__number {
+      font-size: 20px;
+      text-decoration: none;
+
+      @media (max-width: $tablet-width-breakpoint) {
+        font-size: 18px;
+        text-decoration: underline;
+        color: $basic-accent;
+      }
+    }
+
+    @media (max-width: $tablet-width-breakpoint) {
+      justify-content: center;
+    }
+  }
+
+  &--prices:hover {
+    .tel__number {
+      color: $basic-accent;
+    }
+  }
+
+  &--footer {
+    @media (max-width: $mobile-width-breakpoint) {
+      justify-content: center;
+    }
+
+    .tel__number {
+      font-size: 16px;
+      color: $basic-accent;
+    }
+  }
+
+  &--footer:hover {
+    .tel__icon {
+      stroke: $basic-accent;
+    }
   }
 }
 
 .tel__icon {
   stroke-width: 2;
   stroke-miterlimit: 10;
-}
 
-.tel__icon--menu {
-  stroke: $very-dark-grey;
-}
+  &--menu {
+    stroke: $very-dark-grey;
+  }
 
-.tel__icon--prices {
-  stroke: $basic-accent;
-}
+  &--prices {
+    margin-left: -5px;
+    margin-right: 8px;
+    stroke: $basic-accent;
 
-.tel__icon--footer {
-  stroke: $footer-grey;
+    @media (max-width: $tablet-width-breakpoint) {
+      display: none;
+    }
+  }
+
+  &--footer {
+    stroke: $footer-grey;
+
+    @media (max-width: $tablet-width-breakpoint) {
+      margin-right: 10px;
+    }
+  }
 }
 
 .tel__number {
+  margin-left: 12px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.7;
   color: $very-dark-grey;
   text-decoration-line: underline;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    margin: 0;
+  }
 }

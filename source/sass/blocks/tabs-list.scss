@@ -1,12 +1,34 @@
+.tabs-list {
+  display: flex;
+  flex-shrink: 0;
+  max-width: max-content;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+  list-style-type: none;
+  overflow: auto;
+
+  @media (max-width: $tablet-width-breakpoint) {
+    margin-left: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
+    margin-right: calc((100vw - 320px) / (768 - 320) * (21 - 16) + 16px);
+    padding-bottom: 13px;
+  }
+}
+
 .tabs-list__item {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: -0.41px;
+  letter-spacing: -0.3px;
   color: rgba(44, 46, 63, 0.3);
 
-  &--active {
+  &--active .tabs-list__link {
     color: $basic-accent;
+  }
+
+  &:not(:last-child) {
+    margin-right: 99px;
   }
 }

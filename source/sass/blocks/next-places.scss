@@ -1,19 +1,28 @@
 .next-places {
   border-right: 1px solid $footer-grey;
 
+  @media (max-width: $tablet-width-breakpoint) {
+    margin-bottom: 18px;
+  }
+
   @media (max-width: $mobile-width-breakpoint) {
+    margin-bottom: 28px;
     border: none;
   }
 }
 
 .next-places__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.77;
   color: $very-dark-grey;
+
+  @media (max-width: $mobile-width-breakpoint) {
+    text-align: center;
+  }
 }
 
 .next-places__list {
@@ -22,6 +31,23 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: $mobile-width-breakpoint) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "c1 c2"
+      "c4 c5"
+      "c7 c8"
+      "c10 c11"
+      "c13 c14"
+      "c3 c3"
+      "c6 c6"
+      "c9 c9"
+      "c12 c12"
+      "c15 c15";
+    justify-items: center;
+    column-gap: 18px;
+  }
 }
 
 .next-places__item {
@@ -31,4 +57,76 @@
   font-size: 14px;
   line-height: 1.21;
   color: rgba(20, 21, 23, 0.5);
+
+  @media (max-width: $mobile-width-breakpoint) {
+    &:nth-child(1) {
+      grid-area: c1;
+    }
+
+    &:nth-child(2) {
+      grid-area: c2;
+    }
+
+    &:nth-child(3) {
+      grid-area: c3;
+      margin: 0;
+      margin-top: 10px;
+    }
+
+    &:nth-child(4) {
+      grid-area: c4;
+    }
+
+    &:nth-child(5) {
+      grid-area: c5;
+    }
+
+    &:nth-child(6) {
+      grid-area: c6;
+      margin: 0;
+      margin-top: 10px;
+    }
+
+    &:nth-child(7) {
+      grid-area: c7;
+    }
+
+    &:nth-child(8) {
+      grid-area: c8;
+    }
+
+    &:nth-child(9) {
+      grid-area: c9;
+      margin: 0;
+      margin-top: 10px;
+    }
+
+    &:nth-child(10) {
+      grid-area: c10;
+    }
+
+    &:nth-child(11) {
+      grid-area: c11;
+    }
+
+    &:nth-child(12) {
+      grid-area: c12;
+      margin: 0;
+      margin-top: 10px;
+    }
+
+    &:nth-child(13) {
+      grid-area: c13;
+    }
+
+    &:nth-child(14) {
+      grid-area: c14;
+    }
+
+    &:nth-child(15) {
+      grid-area: c15;
+      margin: 0;
+      margin-top: 10px;
+    }
+  }
 }
